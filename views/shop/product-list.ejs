@@ -8,9 +8,9 @@
             <% if(prods.length > 0) { %>
                 <div class="row">
                     <% for(let product of prods) { %>
-                        <div class="col-3">
-                            <div class="card mt-5" style="width: 20rem;">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgphnIYqvlgeG8Ieq9e9JJlqEzX3Cuqouw_w&usqp=CAU" class="card-img-top" width="150px" height="320px" alt="book">
+                        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                            <div class="card mb-5" style="width: 20rem;">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgphnIYqvlgeG8Ieq9e9JJlqEzX3Cuqouw_w&usqp=CAU" class="card-img-top img-fluid" alt="book">
                                 <div class="card-body">
                                     <h2 class="card-title"> <b> <%= product.title  %> </b></h2>
                                     <h3 class="product__price">$19.99</h3>
