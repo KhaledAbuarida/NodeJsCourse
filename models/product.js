@@ -4,9 +4,9 @@ const fs = require('fs');
 const products = [];
 
 module.exports = class product {
-    constructor(title, imgUrl, price, description){
+    constructor(title, imageUrl, price, description){
         this.title = title;
-        this.imgUrl = imgUrl,
+        this.imageUrl = imageUrl;
         this.price = price;
         this.description = description;
     }
