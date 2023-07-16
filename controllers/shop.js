@@ -1,6 +1,7 @@
 const Product = require('../models/product');
+const { purge } = require('../routes/admin');
 
-exports.getProduct = (req, res, next)=> {
+exports.getProducts = (req, res, next)=> {
     Product.fetchAll(product => {
         res.render('shop/product-list', {
             prods: product,
@@ -18,6 +19,14 @@ exports.getIndex = (req, res, next) => {
             path: '/'
         })
     });   
+}
+
+exports.getProduct = (req, res, next) => {
+    const prodId = req.params.productId;
+    Product.findById(prodId, product => {
+        res.render('shop/product-detail', {pageTitle: product.title , product: product, path: '/products'})
+    })
+    // res.redirect('/'); 
 }
 
 exports.getCart = (req, res, next) => {

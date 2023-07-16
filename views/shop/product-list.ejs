@@ -15,9 +15,9 @@
                                     <h2 class="card-title"> <b> <%= product.title  %> </b></h2>
                                     <h3 class="product__price">$<%= product.price %> </h3>
                                     <p class="card-text"><%= product.description %> </p>
-                                    <form action="/add-to-card" method="post">
-                                        <button type="submit" class="btn btn-success">Add To Cart</button>
-                                    </form>
+                                    <a href="/products/<%= product.id %>" class="btn"> Details..</a>
+                                    <%- include('../includes/add-to-cart.ejs', {product: product}) %>
+
                                 </div>
                             </div>
                         </div>
